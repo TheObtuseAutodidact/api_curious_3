@@ -1,0 +1,9 @@
+<h1>Dashboard#show</h1>
+<p>Find me in app/views/dashboard/show.html.erb</p>
+<% if current_user %>
+  <%= image_tag current_user.image_url, class: "img-circle img-thumbnail" %>
+  <%= current_user.nickname %>
+  <%= current_user.email %>
+
+  <%= link_to "logout", logout_path, method: :delete %>
+<% end %>
